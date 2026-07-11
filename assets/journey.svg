@@ -1,0 +1,61 @@
+<svg width="1000" height="180" viewBox="0 0 1000 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="pulseGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="180" fill="#0D0D0D"/>
+
+  <line x1="80" y1="90" x2="920" y2="90" stroke="#242424" stroke-width="2"/>
+
+  <!-- traveling pulse -->
+  <circle r="5" fill="#F5F3EE" filter="url(#pulseGlow)" opacity="0">
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="4s" begin="2.6s" repeatCount="indefinite"/>
+    <animateMotion path="M80,90 L920,90" dur="4s" begin="2.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- nodes -->
+  <g font-family="Consolas, Menlo, monospace" font-size="13" letter-spacing="2">
+
+    <g>
+      <circle cx="80" cy="90" r="0" fill="#F5F3EE"><animate attributeName="r" to="7" dur="0.4s" begin="0.0s" fill="freeze"/></circle>
+      <text x="80" y="60" fill="#8B9099" text-anchor="middle" opacity="0">BBA
+        <animate attributeName="opacity" to="1" dur="0.4s" begin="0.0s" fill="freeze"/>
+      </text>
+    </g>
+
+    <g>
+      <circle cx="290" cy="90" r="0" fill="#F5F3EE"><animate attributeName="r" to="7" dur="0.4s" begin="0.5s" fill="freeze"/></circle>
+      <text x="290" y="132" fill="#C0C0C0" text-anchor="middle" opacity="0">EXCEL
+        <animate attributeName="opacity" to="1" dur="0.4s" begin="0.5s" fill="freeze"/>
+      </text>
+    </g>
+
+    <g>
+      <circle cx="500" cy="90" r="0" fill="#F5F3EE"><animate attributeName="r" to="7" dur="0.4s" begin="1.0s" fill="freeze"/></circle>
+      <text x="500" y="60" fill="#C0C0C0" text-anchor="middle" opacity="0">SQL
+        <animate attributeName="opacity" to="1" dur="0.4s" begin="1.0s" fill="freeze"/>
+      </text>
+    </g>
+
+    <g>
+      <circle cx="710" cy="90" r="0" fill="#F5F3EE"><animate attributeName="r" to="7" dur="0.4s" begin="1.5s" fill="freeze"/></circle>
+      <text x="710" y="132" fill="#C0C0C0" text-anchor="middle" opacity="0">POWER BI
+        <animate attributeName="opacity" to="1" dur="0.4s" begin="1.5s" fill="freeze"/>
+      </text>
+    </g>
+
+    <g>
+      <circle cx="920" cy="90" r="0" fill="#F5F3EE"><animate attributeName="r" to="7" dur="0.4s" begin="2.0s" fill="freeze"/></circle>
+      <text x="920" y="60" fill="#C0C0C0" text-anchor="middle" opacity="0">PYTHON
+        <animate attributeName="opacity" to="1" dur="0.4s" begin="2.0s" fill="freeze"/>
+      </text>
+    </g>
+
+  </g>
+</svg>
