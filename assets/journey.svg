@@ -7,14 +7,18 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <linearGradient id="tGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B5732B"/>
+      <stop offset="100%" stop-color="#F0C077"/>
+    </linearGradient>
   </defs>
 
-  <rect width="1000" height="180" fill="#0D0D0D"/>
+  <rect width="1000" height="180" fill="#120E09"/>
 
-  <line x1="80" y1="90" x2="920" y2="90" stroke="#242424" stroke-width="2"/>
+  <line x1="80" y1="90" x2="920" y2="90" stroke="#2B2116" stroke-width="2"/>
 
   <!-- traveling pulse -->
-  <circle r="5" fill="#F5F3EE" filter="url(#pulseGlow)" opacity="0">
+  <circle r="5" fill="#F0C077" filter="url(#pulseGlow)" opacity="0">
     <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="4s" begin="2.6s" repeatCount="indefinite"/>
     <animateMotion path="M80,90 L920,90" dur="4s" begin="2.6s" repeatCount="indefinite"/>
   </circle>
@@ -23,36 +27,36 @@
   <g font-family="Consolas, Menlo, monospace" font-size="13" letter-spacing="2">
 
     <g>
-      <circle cx="80" cy="90" r="0" fill="#F5F3EE"><animate attributeName="r" to="7" dur="0.4s" begin="0.0s" fill="freeze"/></circle>
-      <text x="80" y="60" fill="#8B9099" text-anchor="middle" opacity="0">BBA
+      <circle cx="80" cy="90" r="0" fill="url(#tGrad)"><animate attributeName="r" to="7" dur="0.4s" begin="0.0s" fill="freeze"/></circle>
+      <text x="80" y="60" fill="#B7A78C" text-anchor="middle" opacity="0">BBA
         <animate attributeName="opacity" to="1" dur="0.4s" begin="0.0s" fill="freeze"/>
       </text>
     </g>
 
     <g>
-      <circle cx="290" cy="90" r="0" fill="#F5F3EE"><animate attributeName="r" to="7" dur="0.4s" begin="0.5s" fill="freeze"/></circle>
-      <text x="290" y="132" fill="#C0C0C0" text-anchor="middle" opacity="0">EXCEL
+      <circle cx="290" cy="90" r="0" fill="url(#tGrad)"><animate attributeName="r" to="7" dur="0.4s" begin="0.5s" fill="freeze"/></circle>
+      <text x="290" y="132" fill="#F0C077" text-anchor="middle" opacity="0">EXCEL
         <animate attributeName="opacity" to="1" dur="0.4s" begin="0.5s" fill="freeze"/>
       </text>
     </g>
 
     <g>
-      <circle cx="500" cy="90" r="0" fill="#F5F3EE"><animate attributeName="r" to="7" dur="0.4s" begin="1.0s" fill="freeze"/></circle>
-      <text x="500" y="60" fill="#C0C0C0" text-anchor="middle" opacity="0">SQL
+      <circle cx="500" cy="90" r="0" fill="url(#tGrad)"><animate attributeName="r" to="7" dur="0.4s" begin="1.0s" fill="freeze"/></circle>
+      <text x="500" y="60" fill="#F0C077" text-anchor="middle" opacity="0">SQL
         <animate attributeName="opacity" to="1" dur="0.4s" begin="1.0s" fill="freeze"/>
       </text>
     </g>
 
     <g>
-      <circle cx="710" cy="90" r="0" fill="#F5F3EE"><animate attributeName="r" to="7" dur="0.4s" begin="1.5s" fill="freeze"/></circle>
-      <text x="710" y="132" fill="#C0C0C0" text-anchor="middle" opacity="0">POWER BI
+      <circle cx="710" cy="90" r="0" fill="url(#tGrad)"><animate attributeName="r" to="7" dur="0.4s" begin="1.5s" fill="freeze"/></circle>
+      <text x="710" y="132" fill="#F0C077" text-anchor="middle" opacity="0">POWER BI
         <animate attributeName="opacity" to="1" dur="0.4s" begin="1.5s" fill="freeze"/>
       </text>
     </g>
 
     <g>
-      <circle cx="920" cy="90" r="0" fill="#F5F3EE"><animate attributeName="r" to="7" dur="0.4s" begin="2.0s" fill="freeze"/></circle>
-      <text x="920" y="60" fill="#C0C0C0" text-anchor="middle" opacity="0">PYTHON
+      <circle cx="920" cy="90" r="0" fill="url(#tGrad)" filter="url(#pulseGlow)"><animate attributeName="r" to="7" dur="0.4s" begin="2.0s" fill="freeze"/></circle>
+      <text x="920" y="60" fill="#F4E9D8" text-anchor="middle" opacity="0">PYTHON
         <animate attributeName="opacity" to="1" dur="0.4s" begin="2.0s" fill="freeze"/>
       </text>
     </g>
