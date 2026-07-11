@@ -1,0 +1,62 @@
+<svg width="1000" height="260" viewBox="0 0 1000 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="titleReveal">
+      <rect x="58" y="145" width="0" height="80">
+        <animate attributeName="width" from="0" to="620" dur="1.6s" begin="0.1s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.1 1"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <rect width="1000" height="260" fill="#0D0D0D"/>
+
+  <!-- faint grid -->
+  <g stroke="#1A1A1A" stroke-width="1">
+    <line x1="0" y1="40" x2="1000" y2="40"/>
+    <line x1="0" y1="90" x2="1000" y2="90"/>
+    <line x1="0" y1="140" x2="1000" y2="140"/>
+    <line x1="0" y1="190" x2="1000" y2="190"/>
+  </g>
+
+  <!-- animated data line -->
+  <g transform="translate(0,-4)">
+    <path d="M60,190 L180,150 L300,168 L420,100 L540,128 L660,66 L780,104 L900,42"
+          fill="none" stroke="#C0C0C0" stroke-width="2"
+          stroke-dasharray="1600" stroke-dashoffset="1600">
+      <animate attributeName="stroke-dashoffset" from="1600" to="0" dur="2.4s" begin="0s" fill="freeze" calcMode="spline" keySplines="0.3 0 0.1 1"/>
+    </path>
+
+    <g fill="#F5F3EE">
+      <circle cx="60" cy="190" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="0s" fill="freeze"/></circle>
+      <circle cx="180" cy="150" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="0.3s" fill="freeze"/></circle>
+      <circle cx="300" cy="168" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="0.6s" fill="freeze"/></circle>
+      <circle cx="420" cy="100" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="0.9s" fill="freeze"/></circle>
+      <circle cx="540" cy="128" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="1.2s" fill="freeze"/></circle>
+      <circle cx="660" cy="66" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="1.5s" fill="freeze"/></circle>
+      <circle cx="780" cy="104" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="1.8s" fill="freeze"/></circle>
+      <circle cx="900" cy="42" r="0" filter="url(#softGlow)"><animate attributeName="r" to="4.5" dur="0.25s" begin="2.1s" fill="freeze"/></circle>
+    </g>
+  </g>
+
+  <!-- typed title -->
+  <g clip-path="url(#titleReveal)">
+    <text x="60" y="200" font-family="Consolas, Menlo, monospace" font-size="52" fill="#F5F3EE" letter-spacing="1">AMAN SINGH</text>
+  </g>
+
+  <!-- cursor -->
+  <rect x="600" y="155" width="4" height="46" fill="#F5F3EE">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.51;1" dur="0.9s" begin="1.7s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- subtitle -->
+  <text x="61" y="232" font-family="Consolas, Menlo, monospace" font-size="14" fill="#8B9099" letter-spacing="4" opacity="0">
+    DATA ANALYST — KOLKATA, INDIA
+    <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="2.1s" fill="freeze"/>
+  </text>
+</svg>
