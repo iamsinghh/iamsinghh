@@ -151,7 +151,7 @@
     <!-- Node 1 -->
     <g>
       <circle cx="80" cy="95" r="0" fill="url(#tGrad)"><animate attributeName="r" to="7" dur="0.4s" begin="0.0s" fill="freeze"/></circle>
-      <text x="80" y="62" fill="#B7A78C" text-anchor="middle" opacity="0">Business Graduate
+      <text x="95" y="62" fill="#B7A78C" text-anchor="middle" opacity="0" font-size="17">Business Graduate
         <animate attributeName="opacity" to="1" dur="0.4s" begin="0.0s" fill="freeze"/>
       </text>
     </g>
