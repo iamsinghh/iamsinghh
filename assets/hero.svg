@@ -1,77 +1,178 @@
-<svg width="1000" height="260" viewBox="0 0 1000 260" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="300" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#B5732B"/>
-      <stop offset="55%" stop-color="#D9A54A"/>
-      <stop offset="100%" stop-color="#F0C077"/>
+    <!-- Premium Dark Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050302"/>
+      <stop offset="40%" stop-color="#0f0b06"/>
+      <stop offset="100%" stop-color="#171109"/>
     </linearGradient>
-    <radialGradient id="bgGlow" cx="80%" cy="10%" r="60%">
-      <stop offset="0%" stop-color="#2A1B0B" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#120E09" stop-opacity="0"/>
+
+    <!-- Luxury Ambient Character Backlight Glow -->
+    <radialGradient id="charGlow" cx="82%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e3b43b" stop-opacity="0.22"/>
+      <stop offset="50%" stop-color="#0f0b06" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#050302" stop-opacity="0"/>
     </radialGradient>
-    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="2.4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <clipPath id="titleReveal">
-      <rect x="58" y="145" width="0" height="80">
-        <animate attributeName="width" from="0" to="620" dur="1.6s" begin="0.1s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.1 1"/>
-      </rect>
-    </clipPath>
+
+    <!-- Master Metallic Gold Gradient for Highlights & Text -->
+    <linearGradient id="premiumGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fff4cc"/>
+      <stop offset="25%" stop-color="#f5cd60"/>
+      <stop offset="65%" stop-color="#dbb23d"/>
+      <stop offset="100%" stop-color="#966e11"/>
+    </linearGradient>
+
+    <!-- Deep Dark Palette for Cap and Hair Base -->
+    <linearGradient id="capGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#241e1a"/>
+      <stop offset="100%" stop-color="#120e0c"/>
+    </linearGradient>
+
+    <!-- Polished Natural Skin Tones -->
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff4eb"/>
+      <stop offset="100%" stop-color="#ffdcb8"/>
+    </linearGradient>
+    <linearGradient id="skinShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8c9b0"/>
+      <stop offset="100%" stop-color="#d1ab8c"/>
+    </linearGradient>
+
+    <!-- Layered Outfit Tones (Beige/Tan Open Jacket over Dark Tee) -->
+    <linearGradient id="jacketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dfd2c0"/>
+      <stop offset="100%" stop-color="#b8aa96"/>
+    </linearGradient>
+    <linearGradient id="innerTeeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c1815"/>
+      <stop offset="100%" stop-color="#0a0807"/>
+    </linearGradient>
+
+    <!-- Dark Premium Sunglasses Lens Gradient -->
+    <linearGradient id="lensGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#201c24"/>
+      <stop offset="100%" stop-color="#0f0d12"/>
+    </linearGradient>
   </defs>
 
-  <rect width="1000" height="260" fill="#120E09"/>
-  <rect width="1000" height="260" fill="url(#bgGlow)"/>
+  <!-- Canvas Background -->
+  <rect width="1000" height="300" fill="url(#bgGrad)"/>
+  <rect width="1000" height="300" fill="url(#charGlow)"/>
 
-  <!-- faint grid -->
-  <g stroke="#241A0D" stroke-width="1">
-    <line x1="0" y1="40" x2="1000" y2="40"/>
-    <line x1="0" y1="90" x2="1000" y2="90"/>
-    <line x1="0" y1="140" x2="1000" y2="140"/>
-    <line x1="0" y1="190" x2="1000" y2="190"/>
+  <!-- Crisp Micro-Particles -->
+  <g fill="#f5cd60">
+    <circle cx="140" cy="80" r="1.5"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="310" cy="210" r="2"><animate attributeName="opacity" values="0.1;0.9;0.1" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="480" cy="70" r="1.5"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="650" cy="240" r="2.5"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="910" cy="90" r="1.5"><animate attributeName="opacity" values="0.1;0.6;0.1" dur="3.8s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- animated data line -->
-  <g transform="translate(0,-4)">
-    <path d="M60,190 L180,150 L300,168 L420,100 L540,128 L660,66 L780,104 L900,42"
-          fill="none" stroke="url(#lineGrad)" stroke-width="2.5"
-          stroke-dasharray="1600" stroke-dashoffset="1600">
-      <animate attributeName="stroke-dashoffset" from="1600" to="0" dur="2.4s" begin="0s" fill="freeze" calcMode="spline" keySplines="0.3 0 0.1 1"/>
-    </path>
+  <!-- Typography -->
+  <g font-family="Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, sans-serif">
+    <text x="75" y="125" font-size="54" font-weight="800" fill="url(#premiumGold)" letter-spacing="-0.5">
+      Hello, I'm Aman
+    </text>
+    <text x="75" y="178" font-size="26" font-weight="400" fill="#edd6b1" opacity="0.95">
+      I turn ideas into code, one query at a time!
+    </text>
+   
+  </g>
 
-    <g fill="#F0C077">
-      <circle cx="60" cy="190" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="0s" fill="freeze"/></circle>
-      <circle cx="180" cy="150" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="0.3s" fill="freeze"/></circle>
-      <circle cx="300" cy="168" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="0.6s" fill="freeze"/></circle>
-      <circle cx="420" cy="100" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="0.9s" fill="freeze"/></circle>
-      <circle cx="540" cy="128" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="1.2s" fill="freeze"/></circle>
-      <circle cx="660" cy="66" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="1.5s" fill="freeze"/></circle>
-      <circle cx="780" cy="104" r="0"><animate attributeName="r" to="3.5" dur="0.25s" begin="1.8s" fill="freeze"/></circle>
-      <circle cx="900" cy="42" r="0" filter="url(#softGlow)"><animate attributeName="r" to="5" dur="0.25s" begin="2.1s" fill="freeze"/></circle>
+  <!-- Re-engineered Vector Character Group -->
+  <g transform="translate(820, 138)">
+    <g>
+      <!-- Premium Smooth Micro-Bobbing Animation -->
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="3.5s" repeatCount="indefinite" ease="ease-in-out"/>
+
+      <!-- Back Hair Layer -->
+      <path d="M -50 -12 C -50 15 -35 25 0 25 C 35 25 50 15 50 -12 Z" fill="#0f0c0a"/>
+
+      <!-- Torso Layering (Beige Open Jacket & Black Tee) -->
+      <path d="M -34 65 Q 0 82 34 65 L 42 165 L -42 165 Z" fill="url(#innerTeeGrad)"/>
+      <!-- Open Beige Shirt/Jacket -->
+      <path d="M -74 90 C -74 90 -58 64 -34 62 L -24 88 L -46 165 L -84 165 Z" fill="url(#jacketGrad)"/>
+      <path d="M 74 90 C 74 90 58 64 34 62 L 24 88 L 46 165 L 84 165 Z" fill="url(#jacketGrad)"/>
+      <!-- Left & Right Folded Collar Details -->
+      <path d="M -34 62 L -18 90 L -36 96 Z" fill="#d2c4b0" stroke="#b8aa96" stroke-width="1"/>
+      <path d="M 34 62 L 18 90 L 36 96 Z" fill="#d2c4b0" stroke="#b8aa96" stroke-width="1"/>
+
+      <!-- Neck Layering -->
+      <path d="M -16 20 L -16 66 L 16 66 L 16 20 Z" fill="url(#skinGrad)"/>
+      <path d="M -16 20 L 0 44 L 16 20 Z" fill="url(#skinShadow)"/>
+
+      <!-- Sunglasses Handles (Drawn BEHIND the ears chronologically) -->
+      <g stroke="#0f0d12" stroke-width="4" stroke-linecap="round" fill="none">
+        <path d="M -38 -12 L -54 -12 C -56 -12 -57 -8 -56 -4"/> 
+        <path d="M 38 -12 L 54 -12 C 56 -12 57 -8 56 -4"/>
+      </g>
+
+      <!-- Clean Chibi Ears (Drawn OVER the handles so they loop naturally behind them) -->
+      <circle cx="-51" cy="-6" r="10.5" fill="url(#skinGrad)" stroke="#1c1613" stroke-width="3"/>
+      <circle cx="51" cy="-6" r="10.5" fill="url(#skinGrad)" stroke="#1c1613" stroke-width="3"/>
+
+      <!-- Face Structure Base -->
+      <path d="M -46 -30 C -46 -30 -47 0 -38 18 L 0 38 L 38 18 C 47 0 46 -30 46 -30 Z" fill="url(#skinGrad)" stroke="#1c1613" stroke-width="4" stroke-linejoin="round"/>
+
+      <!-- Sharp, Pointed Anime-style Nose Positioned Perfectly Between Lenses -->
+      <path d="M -1 -4 L 1 3 L 3 1" stroke="#d1ab8c" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Confident Minimalist Mouth -->
+      <path d="M -8 16 Q 0 14 8 16" stroke="#4a2a15" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+      <!-- Custom Tech-Aesthetic Bold Dark Sunglasses Lenses & Bridge -->
+      <g>
+        <path d="M -39 -14 Q -20 -20 -3 -14 Q -2 -2 0 1 Q -10 14 -23 14 Q -38 11 -39 -14 Z" fill="url(#lensGrad)" stroke="#0f0d12" stroke-width="3.5" stroke-linejoin="round"/>
+        <path d="M 3 -14 Q 20 -20 39 -14 Q 40 -2 39 1 Q 35 14 23 14 Q 8 11 3 -14 Z" fill="url(#lensGrad)" stroke="#0f0d12" stroke-width="3.5" stroke-linejoin="round"/>
+        <path d="M -37 -13 Q -20 -18 -5 -13" stroke="url(#premiumGold)" stroke-width="1.5" fill="none" opacity="0.8"/>
+        <path d="M 5 -13 Q 20 -18 37 -13" stroke="url(#premiumGold)" stroke-width="1.5" fill="none" opacity="0.8"/>
+        <path d="M -4 -12 L 4 -12" stroke="#0f0d12" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M -32 -6 Q -26 -11 -20 -8" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.3" stroke-linecap="round"/>
+        <path d="M 10 -6 Q 16 -11 22 -8" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.3" stroke-linecap="round"/>
+      </g>
+
+      <!-- Sideways Swept Crop Hairstyle Elements under Cap -->
+      <g fill="url(#capGrad)" stroke="#0f0c0a" stroke-width="3.5" stroke-linejoin="round">
+        <path d="M -47 -22 C -48 -35 -40 -48 -36 -50 C -42 -42 -45 -30 -47 -22 Z"/>
+        <path d="M 47 -22 C 48 -35 40 -48 36 -50 C 42 -42 45 -30 47 -22 Z"/>
+      </g>
+
+      <!-- High-End Streetwear Snapback Cap Layering -->
+      <g stroke="#1c1613" stroke-width="4" stroke-linejoin="round">
+        <!-- Main Dome Structure -->
+        <path d="M -48 -46 C -46 -88 -25 -92 0 -92 C 25 -92 46 -88 48 -46 Z" fill="url(#capGrad)"/>
+        <!-- Front Visor Bill extending slightly sideways/forward -->
+        <path d="M -54 -48 C -30 -54 30 -54 54 -48 C 58 -42 50 -40 40 -40 C 15 -42 -15 -42 -40 -40 C -50 -40 -58 -42 -54 -48 Z" fill="#17120e"/>
+        <!-- Gold Metallic Crown Logo Button on Top -->
+        <circle cx="0" cy="-92" r="4.5" fill="url(#premiumGold)" stroke="#1c1613" stroke-width="1.5"/>
+        <!-- "AS" Premium Initial Typography on Cap Front Panel -->
+        <text x="0" y="-58" font-family="Segoe UI, -apple-system, sans-serif" font-weight="900" font-size="20" fill="url(#premiumGold)" text-anchor="middle" letter-spacing="1" stroke="none">AS</text>
+      </g>
+
+      <!-- BALANCED WAVY LEFT HAND: Re-engineered with Clean Natural Finger Shapes -->
+      <g transform="translate(-56, 82)">
+        <g>
+          <animateTransform attributeName="transform" type="rotate" values="0 0 0; -8 0 0; 5 0 0; -8 0 0; 0 0 0" keyTimes="0; 0.25; 0.5; 0.75; 1" dur="2.5s" repeatCount="indefinite"/>
+          <path d="M 0 10 Q -22 22 -34 -14" stroke="url(#jacketGrad)" stroke-width="22" fill="none" stroke-linecap="round"/>
+          <!-- Solid Natural Vector Hand and Individual Smooth Finger Protrusions -->
+          <path d="M -30 -16 C -30 -16 -40 -26 -44 -20 C -48 -14 -42 -8 -26 -13 Z" fill="url(#skinGrad)" stroke="#1c1613" stroke-width="3.5" stroke-linejoin="round"/>
+          <!-- Restructured natural fingers -->
+          <rect x="-44" y="-36" width="6" height="18" rx="3" transform="rotate(-15 -44 -36)" fill="url(#skinGrad)" stroke="#1c1613" stroke-width="3"/> 
+          <rect x="-37" y="-40" width="6" height="21" rx="3" transform="rotate(-5 -37 -40)" fill="url(#skinGrad)" stroke="#1c1613" stroke-width="3"/> 
+          <rect x="-29" y="-37" width="6" height="19" rx="3" transform="rotate(5 -29 -37)" fill="url(#skinGrad)" stroke="#1c1613" stroke-width="3"/> 
+          <path d="M -44 -20 Q -48 -24 -46 -28 Q -42 -28 -38 -20" fill="url(#skinGrad)" stroke="#1c1613" stroke-width="3"/> 
+        </g>
+      </g>
+
+      <!-- PROPORTIONAL NATURAL RIGHT HAND: Rested Downwards matching natural human anatomy -->
+      <g transform="translate(56, 82)">
+        <path d="M 0 10 Q 18 24 24 64" stroke="url(#jacketGrad)" stroke-width="22" fill="none" stroke-linecap="round"/>
+        <!-- Natural Closed Fist Silhouette inside Pocket Region -->
+        <path d="M 24 62 C 28 64 34 70 32 80 C 30 90 18 88 14 82 C 10 78 12 66 24 62 Z" fill="url(#skinGrad)" stroke="#1c1613" stroke-width="3.5" stroke-linejoin="round"/>
+        <path d="M 22 70 Q 28 74 26 80" stroke="#1c1613" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </g>
+
     </g>
   </g>
 
-  <!-- typed title -->
-  <g clip-path="url(#titleReveal)">
-    <text x="60" y="200" font-family="Consolas, Menlo, monospace" font-size="52" fill="#F4E9D8" letter-spacing="1">AMAN SINGH</text>
-  </g>
-
-  <!-- cursor -->
-  <rect x="600" y="155" width="4" height="46" fill="#F0C077">
-    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.51;1" dur="0.9s" begin="1.7s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- subtitle -->
-  <text x="61" y="232" font-family="Consolas, Menlo, monospace" font-size="14" fill="#B7A78C" letter-spacing="4" opacity="0">
-    DATA ANALYST — KOLKATA, INDIA
-    <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="2.1s" fill="freeze"/>
-  </text>
-
-  <!-- accent underline -->
-  <rect x="60" y="245" width="0" height="2" fill="url(#lineGrad)">
-    <animate attributeName="width" from="0" to="880" dur="1s" begin="2.3s" fill="freeze"/>
-  </rect>
-</svg>
+  </svg>
